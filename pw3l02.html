@@ -23,10 +23,11 @@
     </p>
     <script>
       let firstName = prompt("What is your first name?");
-      if (firstName.length > 0) {
-        alert("Welcome, " + firstName + "!");
-      } else {
+      firstName = firstName.trim();
+      if (firstName === "") {
         alert("Too bad for you");
+      } else {
+        alert("Welcome, " + firstName + "!");
       }
     </script>
   </body>
