@@ -19,10 +19,10 @@ let sydney = {
 console.log(sydney.temperature);
 
 //challenge3
-let cityNames = ["Sydney", "Melborne", "Brisbane"];
-console.log(cityNames[0]);
-console.log(cityNames[1]);
-console.log(cityNames[2]);
+let australianCities = ["Sydney", "Melborne", "Brisbane"];
+console.log(australianCities[0]);
+console.log(australianCities[1]);
+console.log(australianCities[2]);
 
 //challenge4
 let cities = [
