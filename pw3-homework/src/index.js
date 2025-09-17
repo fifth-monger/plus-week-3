@@ -22,18 +22,19 @@ let weather = {
 };
 
 // write your code here
-let cityQuestion = prompt("Enter a city");
-let cityAnswer = cityQuestion.trim().toLowerCase();
-if (weather[cityAnswer]) {
-  let data = weather[cityAnswer];
-  let celsius = Math.round(data.temp);
-  let fahrenheit = Math.round((data.temp * 9) / 5 + 32);
-  let humidity = data.humidity;
+let city = prompt("Enter a city?");
+city = city.toLowerCase();
+if (weather[city] !== undefined) {
+  let temperature = weather[city].temp;
+  let humidity = weather[city].humidity;
+  let celsiusTemperature = Math.round(temperature);
+  let fahrenheitTemperature = Math.round((temperature * 9) / 5 + 32);
+
   alert(
-    `It is currently ${celsius}℃ (${fahrenheit}℉) in ${cityAnswer} with a humidity of ${humidity}%`
+    `It is currently ${celsiusTemperature}°C (${fahrenheitTemperature}°F) in ${city} with a humidity of ${humidity}%`
   );
 } else {
   alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${cityAnswer}`
+    `Sorry we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
   );
 }
